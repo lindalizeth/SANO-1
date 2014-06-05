@@ -11,11 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140605023030) do
+ActiveRecord::Schema.define(version: 20140605183331) do
+
+  create_table "centros", force: true do |t|
+    t.string   "nombre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "funcionarios", force: true do |t|
+    t.string   "nombres"
+    t.string   "apellidos"
+    t.string   "indentificacion"
+    t.string   "telefono"
+    t.string   "mail"
+    t.string   "codigo"
+    t.string   "EPS"
+    t.string   "IPS"
+    t.integer  "centro_id"
+    t.integer  "tipodoc_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "funcionarios", ["centro_id"], name: "index_funcionarios_on_centro_id"
+  add_index "funcionarios", ["tipodoc_id"], name: "index_funcionarios_on_tipodoc_id"
 
   create_table "logueos", force: true do |t|
     t.string   "usuario"
     t.string   "clave"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tipodocs", force: true do |t|
+    t.string   "nombre"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

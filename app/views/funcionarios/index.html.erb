@@ -1,0 +1,43 @@
+<h1>Lista de funcionarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombres</th>
+      <th>Apellidos</th>
+       <th>Tipodoc</th>
+      <th>Indentificacion</th>
+      <th>Telefono</th>
+      <th>Mail</th>
+      <th>Codigo</th>
+      <th>Eps</th>
+      <th>Ips</th>
+      <th>Centro</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @funcionarios.each do |funcionario| %>
+      <tr>
+        <td><%= funcionario.nombres %></td>
+        <td><%= funcionario.apellidos %></td>
+        <td><%= funcionario.indentificacion %></td>
+        <td><%= funcionario.telefono %></td>
+        <td><%= funcionario.mail %></td>
+        <td><%= funcionario.codigo %></td>
+        <td><%= funcionario.EPS %></td>
+        <td><%= funcionario.IPS %></td>
+        <td><%= funcionario.centro.nombre %></td>
+        <td><%= funcionario.tipodoc.nombre %></td>
+        <td><%= link_to 'Ver', funcionario %></td>
+        <td><%= link_to 'Editar', edit_funcionario_path(funcionario) %></td>
+        <td><%= link_to 'Eliminar', funcionario, method: :delete, data: { confirm: 'Está seguro que desea eliminar este registro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Funcionario', new_funcionario_path %>

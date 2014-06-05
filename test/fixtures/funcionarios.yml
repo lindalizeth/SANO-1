@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombres: MyString
+  apellidos: MyString
+  indentificacion: MyString
+  telefono: MyString
+  mail: MyString
+  codigo: MyString
+  EPS: MyString
+  IPS: MyString
+  centro_id: 
+  tipodoc_id: 
+
+two:
+  nombres: MyString
+  apellidos: MyString
+  indentificacion: MyString
+  telefono: MyString
+  mail: MyString
+  codigo: MyString
+  EPS: MyString
+  IPS: MyString
+  centro_id: 
+  tipodoc_id: 

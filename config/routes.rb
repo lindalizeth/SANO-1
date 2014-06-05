@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :funcionarios
+
+  resources :tipodocs
+
+  resources :centros
+
   resources :logueos
 
   # The priority is based upon order of creation: first created -> highest priority.

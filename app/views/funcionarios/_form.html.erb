@@ -1,0 +1,60 @@
+<%= form_for(@funcionario) do |f| %>
+  <% if @funcionario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@funcionario.errors.count, "error") %> prohibited this funcionario from being saved:</h2>
+
+      <ul>
+      <% @funcionario.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombres %><br>
+    <%= f.text_field :nombres %>
+  </div>
+  <div class="field">
+    <%= f.label :apellidos %><br>
+    <%= f.text_field :apellidos %>
+   </div>
+   <div class="field">
+   Tipodo de documento  <br>
+	<%= f.collection_select :tipodoc_id, Tipodoc.all, :id, :nombre, class: "form-control", prompt:
+	"Seleccione documento" %>
+  </div>
+  <div class="field">
+    <%= f.label :indentificacion %><br>
+    <%= f.text_field :indentificacion %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono %><br>
+    <%= f.text_field :telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :mail %><br>
+    <%= f.text_field :mail %>
+  </div>
+  <div class="field">
+    <%= f.label :codigo %><br>
+    <%= f.text_field :codigo %>
+  </div>
+  <div class="field">
+    <%= f.label :EPS %><br>
+    <%= f.text_field :EPS %>
+  </div>
+  <div class="field">
+    <%= f.label :IPS %><br>
+    <%= f.text_field :IPS %>
+  </div> 
+   <div class="field">
+	Centro <br>
+	<%= f.collection_select :centro_id, Centro.all, :id, :nombre, class: "form-control", prompt:
+	"Seleccione Centro" %>
+   </div>
+  <div class="actions">
+ 
+    <%= f.submit "Registrar"%>
+  </div>
+<% end %>
