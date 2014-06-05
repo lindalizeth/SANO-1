@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombres:</strong>
+  <%= @funcionario.nombres %>
+</p>
+
+<p>
+  <strong>Apellidos:</strong>
+  <%= @funcionario.apellidos %>
+</p>
+
+<p>
+  <strong>Tipodoc:</strong>
+  <%= @funcionario.tipodoc.nombre %>
+</p>
+
+
+<p>
+  <strong>Indentificacion:</strong>
+  <%= @funcionario.indentificacion %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @funcionario.telefono %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @funcionario.mail %>
+</p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @funcionario.codigo %>
+</p>
+
+<p>
+  <strong>Eps:</strong>
+  <%= @funcionario.EPS %>
+</p>
+
+<p>
+  <strong>Ips:</strong>
+  <%= @funcionario.IPS %>
+</p>
+
+<p>
+  <strong>Centro:</strong>
+  <%= @funcionario.centro.nombre %>
+</p>
+
+
+<%= link_to 'Editar', edit_funcionario_path(@funcionario) %> |
+<%= link_to 'Atras', funcionarios_path %>
