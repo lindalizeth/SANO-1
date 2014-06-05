@@ -1,3 +1,4 @@
+Sano es una aplicación del proyecto formativo en Sena.
 == README
 
 This README would normally document whatever steps are necessary to get the
