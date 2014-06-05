@@ -1,0 +1,25 @@
+<%= form_for(@logueo) do |f| %>
+  <% if @logueo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@logueo.errors.count, "error") %> prohibited this logueo from being saved:</h2>
+
+      <ul>
+      <% @logueo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :usuario %><br>
+    <%= f.text_field :usuario %>
+  </div>
+  <div class="field">
+    <%= f.label :clave %><br>
+    <%= f.password_field :clave %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Ingresar"%>
+  </div>
+<% end %>
