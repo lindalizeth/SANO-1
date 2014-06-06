@@ -11,10 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140605183331) do
+ActiveRecord::Schema.define(version: 20140606200259) do
 
   create_table "centros", force: true do |t|
     t.string   "nombre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "consultar_salidas", force: true do |t|
+    t.date     "Selccione_fecha"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -40,6 +46,19 @@ ActiveRecord::Schema.define(version: 20140605183331) do
   create_table "logueos", force: true do |t|
     t.string   "usuario"
     t.string   "clave"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "registrar_salidas", force: true do |t|
+    t.date     "Selccione_fecha"
+    t.string   "lugarSalida"
+    t.string   "FuncionarioACargo"
+    t.integer  "fichaGrupo"
+    t.boolean  "tipoSalida_pedagogico"
+    t.boolean  "Recreativo"
+    t.boolean  "Otro"
+    t.string   "digacual"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

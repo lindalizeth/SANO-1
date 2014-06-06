@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Selccione fecha:</strong>
+  <%= @registrar_salida.Selccione_fecha %>
+</p>
+
+<p>
+  <strong>Lugar salida:</strong>
+  <%= @registrar_salida.lugarSalida %>
+</p>
+
+<p>
+  <strong>Funcionario a cargo:</strong>
+  <%= @registrar_salida.FuncionarioACargo %>
+</p>
+
+<p>
+  <strong>Fichagrupo:</strong>
+  <%= @registrar_salida.fichaGrupo %>
+</p>
+
+<p>
+  <strong>Tiposalida pedagogico:</strong>
+  <%= @registrar_salida.tipoSalida_pedagogico %>
+</p>
+
+<p>
+  <strong>Recreativo:</strong>
+  <%= @registrar_salida.Recreativo %>
+</p>
+
+<p>
+  <strong>Otro:</strong>
+  <%= @registrar_salida.Otro %>
+</p>
+
+<p>
+  <strong>Digacual:</strong>
+  <%= @registrar_salida.digacual %>
+</p>
+
+<%= link_to 'Editar', edit_registrar_salida_path(@registrar_salida) %> |
+<%= link_to 'Atras', registrar_salidas_path %>

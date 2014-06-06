@@ -1,0 +1,50 @@
+<%= form_for(@registrar_salida) do |f| %>
+  <% if @registrar_salida.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@registrar_salida.errors.count, "error") %> prohibited this registrar_salida from being saved:</h2>
+
+      <ul>
+      <% @registrar_salida.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Selccione_fecha %><br>
+    <%= f.date_select :Selccione_fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :lugarSalida %><br>
+    <%= f.text_field :lugarSalida %>
+  </div>
+  <div class="field">
+    <%= f.label :FuncionarioACargo %><br>
+    <%= f.text_field :FuncionarioACargo %>
+  </div>
+  <div class="field">
+    <%= f.label :fichaGrupo %><br>
+    <%= f.number_field :fichaGrupo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pedagogico %><br>
+    <%= f.check_box :tipoSalida_pedagogico %>
+  </div>
+  <div class="field">
+    <%= f.label :Recreativo %><br>
+    <%= f.check_box :Recreativo %>
+  </div>
+  <div class="field">
+    <%= f.label :Otro %><br>
+    <%= f.check_box :Otro %>
+  </div>
+  <div class="field">
+    <%= f.label :digacual %><br>
+    <%= f.text_field :digacual %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Guardar" %>
+  </div>
+<% end %>
