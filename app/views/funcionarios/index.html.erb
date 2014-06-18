@@ -1,3 +1,4 @@
+<br><br><br><br><br><br>
 <h1>Lista de funcionarios</h1>
 
 <table>
@@ -23,11 +24,11 @@
       <tr>
         <td><%= funcionario.nombres %></td>
         <td><%= funcionario.apellidos %></td>
-        <td><%= funcionario.tipodoc.nombre %></td>
+        <td><%= funcionario.tipodoc.nombre rescue nil%></td>
         <td><%= funcionario.indentificacion %></td>
         <td><%= funcionario.telefono %></td>
         <td><%= funcionario.mail %></td>
-        <td><%= funcionario.centro.nombre %></td>
+        <td><%= funcionario.centro.nombre rescue nil%></td>
         <td><%= funcionario.codigo %></td>
         <td><%= funcionario.EPS %></td>
         <td><%= funcionario.IPS %></td>

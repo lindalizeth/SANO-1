@@ -39,13 +39,21 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 #gem 'will_paginte'
 
+
+
+ 
 gem 'bootstrap-sass'
 
-group :development do
-gem 'better_errors'
-gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
-gem 'quiet_assets'
-gem 'rails_layout'
+group :development do 
+gem 'better_errors' 
+gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx] 
+gem 'quiet_assets' 
+gem 'rails_layout' 
 end
 
 
+gem 'cancancan', '~> 1.8'
+
+gem 'will_paginate'
+
+gem 'sorcery'

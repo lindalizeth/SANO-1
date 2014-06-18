@@ -1,0 +1,28 @@
+   .crono{
+
+    height: 600%px;
+    bottom:100%px;
+
+
+   }
+.tablacrono {
+   border-collapse: separate;
+   border-spacing: 5px;
+   background: #F5DEB3 url("gradient.gif") bottom left repeat-x;
+   color: #fff;
+   border:double;
+    width:90%;
+    height:500%px;
+    top:100px;
+    
+}
+td, th {
+   background: #fff;
+   color: #000;-spacing: 0;
+}
+table {
+   width:90%;
+    height: 200%px;
+    top: 2000000px;
+  
+}

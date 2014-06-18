@@ -1,0 +1,54 @@
+<%= form_for(@cronograma) do |f| %>
+  <% if @cronograma.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cronograma.errors.count, "error") %> prohibited this cronograma from being saved:</h2>
+
+      <ul>
+      <% @cronograma.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="crono">
+  <div class="field">
+    <%= f.label :seleccione_fecha %><br>
+    <%= f.date_select :seleccione_fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :lugar_salida %><br>
+    <%= f.text_field :lugar_salida %>
+  </div>
+
+  <!--acabo de hacer un cambio aqui, funcionarios_id,lista desplegable--> 
+
+ 
+<div class="field">
+funcionario <br>
+<%= f.collection_select :funcionario_id, Funcionario.all, :id, :nombres, class: "form-control", prompt: "Seleccione Funcionario" %>
+</div>
+
+
+  <div class="field">
+    <%= f.label :ficha_grupo %><br>
+    <%= f.text_field :ficha_grupo %>
+  </div>
+  <!--tipo de salida desplegable-->
+
+  <div class="field">
+Tipo de salida <br>
+<%= f.collection_select :tipo_salida_id, TipoSalida.all, :id, :nombre, class: "form-control", prompt: "Seleccione Salida" %>
+</div>
+
+<!--otra modificacion de programa_id, para que me muestre un desplegable-->
+
+ <div class="field">
+Programa de formación<br>
+<%= f.collection_select :programa_formacion_id,ProgramaFormacion.all, :id, :nombre, class: "form-control", prompt: "Seleccione programa" %>
+</div>
+ 
+  <div class="actions">
+    <%= f.submit "Guardar" %>
+  </div>
+</div>
+<% end %>

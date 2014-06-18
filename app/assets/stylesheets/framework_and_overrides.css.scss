@@ -32,13 +32,21 @@ img {
   }
 // apply styles to HTML elements
 // to make views framework-neutral
+
+
+
 main {
   @extend .container;
-  background-color: #eee;
+  background-image: url("fondo.png");
   padding-bottom: 80px;
   width: 100%;
-  margin-top: 51px; // accommodate the navbar
+  margin-top: 100px; // accommodate the navbar
+  background-repeat:no-repeat;
+  background-size: 1370px 660px;
   }
+
+
+
 section {
   @extend .row;
   margin-top: 20px;

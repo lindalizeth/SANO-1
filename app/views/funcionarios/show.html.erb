@@ -12,7 +12,7 @@
 
 <p>
   <strong>Tipodoc:</strong>
-  <%= @funcionario.tipodoc.nombre %>
+  <%= @funcionario.tipodoc.nombre rescue nil %>
 </p>
 
 
@@ -48,6 +48,7 @@
 
 <p>
   <strong>Centro:</strong>
+  <%= @funcionario.tipodoc.nombre rescue nil %>
   <%= @funcionario.centro.nombre %>
 </p>
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140606200259) do
+ActiveRecord::Schema.define(version: 20140617162953) do
 
   create_table "centros", force: true do |t|
     t.string   "nombre"
@@ -19,8 +19,13 @@ ActiveRecord::Schema.define(version: 20140606200259) do
     t.datetime "updated_at"
   end
 
-  create_table "consultar_salidas", force: true do |t|
-    t.date     "Selccione_fecha"
+  create_table "cronogramas", force: true do |t|
+    t.date     "seleccione_fecha"
+    t.string   "lugar_salida"
+    t.integer  "funcionario_id"
+    t.string   "ficha_grupo"
+    t.integer  "tipo_salida_id"
+    t.integer  "programa_formacion_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -50,6 +55,12 @@ ActiveRecord::Schema.define(version: 20140606200259) do
     t.datetime "updated_at"
   end
 
+  create_table "programa_formacions", force: true do |t|
+    t.string   "nombre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "registrar_salidas", force: true do |t|
     t.date     "Selccione_fecha"
     t.string   "lugarSalida"
@@ -63,10 +74,32 @@ ActiveRecord::Schema.define(version: 20140606200259) do
     t.datetime "updated_at"
   end
 
+  create_table "tipo_salidas", force: true do |t|
+    t.string   "nombre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "tipodocs", force: true do |t|
     t.string   "nombre"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "tiponovedads", force: true do |t|
+    t.string   "nombre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "email",            null: false
+    t.string   "crypted_password", null: false
+    t.string   "salt",             null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end

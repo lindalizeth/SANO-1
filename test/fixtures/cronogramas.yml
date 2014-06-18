@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  seleccione_fecha: 2014-06-13
+  lugar_salida: MyString
+  funcionarios_id: 
+  ficha_grupo: MyString
+  tipo_salida_id: 
+  programa_formacion_id: 
+
+two:
+  seleccione_fecha: 2014-06-13
+  lugar_salida: MyString
+  funcionarios_id: 
+  ficha_grupo: MyString
+  tipo_salida_id: 
+  programa_formacion_id: 

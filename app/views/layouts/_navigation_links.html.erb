@@ -1,1 +1,18 @@
 <%# add navigation links to this file %>
+ <ul id="menu1">
+    <li><a class="navbar-brand" href="http://localhost:3000/">Inicio</a></li>
+
+     <li><%= link_to "Funcionarios", funcionarios_path %>
+        <ul> 
+    			<li><%= link_to "Registrar" %></li> 
+    			<li><%= link_to "Consultar" %></li> 
+    			<li><%= link_to "Cambiar clave" %></li> 
+    		</ul> 
+     </li>
+
+    <li><%= link_to "Novedad" %></li> 
+    <li><%= link_to "Cronograma", cronogramas_path %></li> 
+    <li><%= link_to "Estadisticas" %></li>
+    <li><%= link_to "Seguridad" %></li> 
+    <li><%= link_to "Ayuda" %></li> 
+ </ul>

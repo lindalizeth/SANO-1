@@ -1,0 +1,38 @@
+<br><br><br><br><br><br>
+
+<p id="notice"><%= notice %></p>
+<br>
+<div class="crono">
+<p>
+  <strong>Seleccione fecha:</strong>
+  <%= @cronograma.seleccione_fecha %>
+</p>
+
+<p>
+  <strong>Lugar salida:</strong>
+  <%= @cronograma.lugar_salida %>
+</p>
+
+<p>
+  <strong>Funcionarios:</strong>
+  <%= @cronograma.funcionario.nombres rescue nil %>
+</p>
+
+<p>
+  <strong>Ficha grupo:</strong>
+  <%= @cronograma.ficha_grupo %>
+</p>
+
+<p>
+  <strong>Tipo salida:</strong>
+  <%= @cronograma.tipo_salida.nombre rescue nil %>
+</p>
+
+<p>
+  <strong>Programa formacion:</strong>
+  <%= @cronograma.programa_formacion.nombre rescue nil %>
+</p>
+</div>
+
+<%= link_to 'Editar', edit_cronograma_path(@cronograma) %> |
+<%= link_to 'Atras', cronogramas_path %>

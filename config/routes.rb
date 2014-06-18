@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  resources :registrar_salidas
+  resources :programa_formacions
+
+  resources :cronogramas
+
+  resources :tipo_salidas
+
+  resources :tiponovedads
 
   resources :funcionarios
 
@@ -7,13 +13,11 @@ Rails.application.routes.draw do
 
   resources :centros
 
-  resources :logueos
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'registrar_salidas#index'
+   root 'logueos#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

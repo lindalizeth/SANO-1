@@ -13,3 +13,75 @@
  *= require_tree .
  *= require_self
  */
+/*Estilos del primer menu*/
+#menu1{
+	padding-left:0px; 
+	margin-left: 0px;
+	margin-top: 15px; 
+
+}
+
+	#menu1 li{
+		list-style:none; 
+		float:left;
+	}
+
+		#menu1 li a{
+			display:block; 
+			width:150px;
+			height:20px; 
+			
+			 border-collapse: separate;
+			  border-spacing: 5px;
+             background:  url("gradient.gif") bottom left repeat-x;
+            color: #F5DEB3;
+             border:double;
+			padding:0px;
+			text-decoration:none;
+			text-align:center; 
+			color:#fff;
+			font-family:arial; 
+			font-size:15px;
+			font-weight:bold;
+		}
+
+			#menu1 li a:hover{
+				background:transparent;
+				border-color:transparent;
+				color:#000000;
+			}
+
+				#menu1 li ul{
+					display:none; 
+					position:absolute;
+				}
+
+					#menu1 li ul li {
+						display:block; 
+						float:none; 
+						position:relative; 
+						padding:0px;
+					}
+
+						#menu1 li:hover ul{
+							display:block; 
+							padding-left:0px;
+						}
+table {
+   border-collapse: separate;
+   border-spacing: 5px;
+   background:  	#F5DEB3 url("gradient.gif") bottom left repeat-x;
+   color: #fff;
+   border:double;
+
+}
+td, th {
+   background: #fff;
+   color: #000;-spacing: 0;
+}
+table {
+   width:90%;
+    height: 170px;
+}
+
+

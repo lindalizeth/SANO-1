@@ -1,0 +1,40 @@
+<br><br><br><br><br><br>
+<h1>Lista de cronograma</h1>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha</th><br>
+      <th>Lugar salida</th><br>
+      <th>Funcionarios</th><br>
+      <th>Ficha grupo</th><br>
+      <th>Tipo salida</th><br>
+      <th>Programa formacion</th>
+      <th colspan="3">Acciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cronogramas.each do |cronograma| %>
+      <tr>
+        <td><%= cronograma.seleccione_fecha %></td>
+        <td><%= cronograma.lugar_salida %></td>
+        <td><%= cronograma.funcionario.nombres %></td>
+        <td><%= cronograma.ficha_grupo %></td>
+        <td><%= cronograma.tipo_salida.nombre rescue nil %></td>
+        <td><%= cronograma.programa_formacion.nombre rescue nil %></td>
+        <td><%= link_to ' Ver ', cronograma %></td>
+        <td><%= link_to ' Editar ', edit_cronograma_path(cronograma) %></td>
+        <td><%= link_to 'Eliminar', cronograma, method: :delete, data: { confirm: 'esta seguro de eliminar del cronograma?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cronograma', new_cronograma_path %>
+
+
+

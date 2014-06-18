@@ -1,0 +1,25 @@
+<h1>Listing programa_formacions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @programa_formacions.each do |programa_formacion| %>
+      <tr>
+        <td><%= programa_formacion.nombre %></td>
+        <td><%= link_to 'Show', programa_formacion %></td>
+        <td><%= link_to 'Edit', edit_programa_formacion_path(programa_formacion) %></td>
+        <td><%= link_to 'Destroy', programa_formacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Programa formacion', new_programa_formacion_path %>
